@@ -1,0 +1,76 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Pacientes'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12">
+            <div class="card mb-3">
+                <div class="card-header text-right">
+                    <button class="btn">
+                        <span class="fa fw fa-plus"></span>
+                        Nuevo Empleado
+                    </button>
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-active">
+                                <th>#</th>
+                                <th>#Pasiente</th>
+                                <th>Primer Nobre</th>
+                                <th>Segundo Nombre</th>
+                                <th>Ap. Paterno</th>
+                                <th>Ap. Materno</th>
+                                <th>Estatus</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>40</td>
+                                <td>Gerardo</td>
+                                <td>Daniel</td>
+                                <td>Rodriguez</td>
+                                <td>Mariscal</td>
+                                <td>Activo</td>
+                                <td>
+                                    <div class="btn-group" >
+                                        <button class="btn" ngbTooltip="Tooltip on top" placement="Editar">
+                                            <span class="fa fw fa-pencil"></span>
+                                        </button>
+                                        <button class="btn">
+                                            <span class="fa fw fa-close"></span>
+                                        </button>
+                                        <button class="btn">
+                                            <span class="fa fw fa-check"></span>
+                                        </button>
+                                        <button class="btn">
+                                            <span class="fa fw fa-trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="row">2</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@TwBootstrap</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
