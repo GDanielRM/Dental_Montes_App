@@ -16,7 +16,9 @@ const routes: Routes = [
             { path: 'bs-element', loadChildren: () => import('./bs-element/bs-element.module').then((m) => m.BsElementModule) },
             { path: 'grid', loadChildren: () => import('./grid/grid.module').then((m) => m.GridModule) },
             { path: 'components', loadChildren: () => import('./bs-component/bs-component.module').then((m) => m.BsComponentModule) },
-            { path: 'blank-page', loadChildren: () => import('./blank-page/blank-page.module').then((m) => m.BlankPageModule) }
+            { path: 'blank-page', loadChildren: () => import('./blank-page/blank-page.module').then((m) => m.BlankPageModule) },
+            { path: 'patient-form/:id', loadChildren: () => import('./patient-form/patient-form.module').then((m) => m.PatientFormModule) },
+            { path: 'patient', loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule) },
         ]
     }
 ];

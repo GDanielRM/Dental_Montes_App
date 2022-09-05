@@ -1,0 +1,113 @@
+<!-- <div [@routerTransition]> -->
+    <app-page-header [heading]="'Formulario Paciente'"></app-page-header>
+
+    <h4>Datos Personales</h4>
+    <input type="text" [value]="idPatient" hidden>
+    <div class="row">
+        <div class="col-xl-6">
+            <!-- <form role="form"> -->
+                <div class="form-group">
+                    <label>Primer Nombre</label>
+                    <input class="form-control" [(ngModel)]="firstName"/>
+                    <label>Segundo Nombre</label>
+                    <input class="form-control" [(ngModel)]="middleName"/>
+                </div>
+            <!-- </form> -->
+        </div>
+        <div class="col-xl-6">
+            <!-- <form role="form"> -->
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input class="form-control" [(ngModel)]="lastName"/>
+                    <label>Apellido Materno</label>
+                    <input class="form-control" [(ngModel)]="secondLastName"/>
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <!-- <form role="form"> -->
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <div class="form-group">
+                        <div class="input-group datepicker-input">
+                            <input type="date" class="form-control" name="birthDate" placeholder="yyyy-mm-dd" [(ngModel)]="birthDate"/>
+                        </div>
+                    </div>
+                </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <h4>Direccion</h4>
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="form-group">
+                <label>Ciudad</label>
+                <select class="form-control" [(ngModel)]="opcCity">
+                    <option value="0" >Seleccione una Ciudad</option>
+                    <option *ngFor="let city of cities" [value]="city.id_city" [selected]="city.id_city == opcCity">{{city.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="form-group">
+                <label>Colonia</label>
+                <select class="form-control" [(ngModel)]="opcNeighborhood">
+                    <option value="0">Seleccione una Colonia</option>
+                    <option *ngFor="let neighborhood of neighborhoods" [value]="neighborhood.id_neighborhood" [selected]="neighborhood.id_neighborhood == opcNeighborhood">{{neighborhood.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="form-group">
+                <label>Calle</label>
+                <select class="form-control" [(ngModel)]="opcStreet">
+                    <option value="0">Seleccione una Calle</option>
+                    <option *ngFor="let street of streets" [value]="street.id_street" [selected]="street.id_street == opcStreet">{{street.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-xl-3">
+            <div class="form-group">
+                <label>No. Casa</label>
+                <input class="form-control" [(ngModel)]="houseNumber"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-6">
+            <h4>Información de contacto</h4>
+            <div class="form-group">
+                <label>Telefono Personal</label>
+                <input class="form-control" [(ngModel)]="personalPhone">
+                
+                <label>Email</label>
+                <input class="form-control" [(ngModel)]="email"/>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <h4>Contacto de Emergencia</h4>
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" [(ngModel)]="emergencyContactName"/>
+
+                <label>Numero de Telefono</label>
+                <input class="form-control" [(ngModel)]="emergencyContactPhoneNumber"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4"></div>
+        <div class="col-xl-4 text-center">
+            <div class="form-group">
+                <button class="btn btn-danger" type="button" routerLink="/patient">Cancelar</button>
+                &nbsp;
+                <button class="btn btn-primary" type="button" (click)="SavePatient(idPatient)">Guardar</button>
+            </div>
+        </div>
+        <div class="col-xl-4"></div>
+    </div>
+<!-- </div> -->
